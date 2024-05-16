@@ -218,13 +218,14 @@ function deleteFrame() {
  if (currentFrame == totalFrames) {
    currentFrame -= 1;
  }
- if (totalFrames != 1) {
+ if (totalFrames == 0) {
+  } else {
    totalFrames -= 1;
    digit_0.refreshDigits('Forward2', currentFrame); 
    digit_1.refreshDigits('Forward2', currentFrame);
    digit_2.refreshDigits('Forward2', currentFrame);
    digit_3.refreshDigits('Forward2', currentFrame);
-  }
+ }
 }
 
 function rewindFrame() {
