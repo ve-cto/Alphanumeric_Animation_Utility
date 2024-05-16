@@ -124,7 +124,7 @@ function setup() {
   nextFrame.mousePressed(forwardFrame);
 
   removeFrame = createButton("XXX Delete Last Frame");
-  removeFrame.position (600, 500);
+  removeFrame.position (580, 500);
   removeFrame.mousePressed(deleteFrame);
 
   speedSlider = createSlider(0.2, 10, 5, 0.2);
