@@ -27,6 +27,7 @@ let copyPasteInfo;
 
 let prevFrame;
 let nextFrame;
+let removeFrame;
 let totalFrames=0;
 let currentFrame=0;
 
@@ -122,6 +123,9 @@ function setup() {
   nextFrame.position (760, 500);
   nextFrame.mousePressed(forwardFrame);
 
+  removeFrame = createButton("XXX Remove Frame");
+  removeFrame.position (700, 500);
+  removeFrame.mousePressed(deleteFrame);
 
   speedSlider = createSlider(0.2, 10, 5, 0.2);
   speedSlider.position(190, 530);
@@ -224,6 +228,17 @@ function rewindFrame() {
   digit_3.refreshDigits('Rewind', currentFrame);
 }
 
+function deleteFrame() {
+ if (currentFrame == totalFrames) {
+   currentFrame -= 1;
+ }
+ totalFrames -= 1;
+ digit_0.digitArray[totalFrames] = '0x0000';
+ digit_1.digitArray[totalFrames] = '0x0000';
+ digit_2.digitArray[totalFrames] = '0x0000';
+ digit_3.digitArray[totalFrames] = '0x0000';
+ 
+}
 function draw() {
   background(50, 50, 50);
 
