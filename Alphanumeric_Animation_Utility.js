@@ -216,7 +216,10 @@ function forwardFrame() {
 
 function deleteFrame() {
  if (currentFrame == totalFrames) {
+  if (currentFrame == 0) {
+  } else {
    currentFrame -= 1;
+  }
  }
  if (totalFrames == 0) {
   } else {
