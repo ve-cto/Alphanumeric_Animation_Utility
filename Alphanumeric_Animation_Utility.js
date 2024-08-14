@@ -218,8 +218,14 @@ function deleteFrame() {
  if (currentFrame == totalFrames) {
   if (currentFrame > 0) {
   currentFrames -= 1;
+   digit_0.refreshDigits('Forward2', currentFrame); 
+   digit_1.refreshDigits('Forward2', currentFrame);
+   digit_2.refreshDigits('Forward2', currentFrame);
+   digit_3.refreshDigits('Forward2', currentFrame);
   }
  }
+
+ 
  if (totalFrames == 0) {
   } else {
    totalFrames -= 1;
@@ -228,6 +234,10 @@ function deleteFrame() {
    digit_2.refreshDigits('Forward2', currentFrame);
    digit_3.refreshDigits('Forward2', currentFrame);
  }
+ digit_0.refreshDigits('Forward2', currentFrame); 
+ digit_1.refreshDigits('Forward2', currentFrame);
+ digit_2.refreshDigits('Forward2', currentFrame);
+ digit_3.refreshDigits('Forward2', currentFrame);
 }
 
 function rewindFrame() {
